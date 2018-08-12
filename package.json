@@ -18,7 +18,7 @@
     "watch:sass": "node-sass --output-style --source-map true -o css sass",
     "watch:autoprefixer": "autoprefixer-cli css/style.css",
     "start": "http-server",
-    "babel": "babel js/script.js --watch --out-file js/script-compiled.js"
+    "babel": "babel components/App.js --watch --out-file components/App-compiled.js"
   },
   "keywords": [],
   "author": "",
