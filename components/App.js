@@ -28,8 +28,8 @@ App = React.createClass({
                 var xhr = new XMLHttpRequest();
                 xhr.onload = function() {
                     if (this.status === 200) {
-                        var data = JSON.parse(request.responseText).data;
-                        resolve(JSON.parse(request.responseText).data);
+                        var data = JSON.parse(xhr.responseText).data;
+                        resolve(JSON.parse(xhr.responseText).data);
                     } else {
                         reject(new Error(this.statusText));
                     }
