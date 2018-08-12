@@ -28,6 +28,7 @@ App = React.createClass({
                 var xhr = new XMLHttpRequest();
                 xhr.onload = function() {
                     if (xhr.status === 200) {
+                        var data = JSON.parse(request.responseText).data;
                         resolve(JSON.parse(request.responseText).data);
                     } else {
                         reject(new Error(this.statusText));
@@ -60,7 +61,6 @@ App = React.createClass({
             textAlign: 'center',
             width: '90%'
         };
-
         return (
             <div style={styles}>
                 <h1>Wyszukiwarka GIFow!</h1>
