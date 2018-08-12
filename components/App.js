@@ -27,7 +27,7 @@ App = React.createClass({
             return new Promise (function(resolve, reject){
                 var xhr = new XMLHttpRequest();
                 xhr.onload = function() {
-                    if (xhr.status === 200) {
+                    if (this.status === 200) {
                         var data = JSON.parse(request.responseText).data;
                         resolve(JSON.parse(request.responseText).data);
                     } else {
