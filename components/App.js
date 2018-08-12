@@ -46,8 +46,8 @@ App = React.createClass({
         httpGet(url)
         .then((response) => {
             var gif = { 
-                url: response.data.fixed_width_downsampled_url,
-                sourceUrl: response.data.url
+                url: response.fixed_width_downsampled_url,
+                sourceUrl: response.url
             };
             callback(gif); 
         })
